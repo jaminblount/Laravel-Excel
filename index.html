@@ -1,49 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Laravel4-phpexcel : Laravel 4 wrapper for PHPOffice&#39;s PHPExcel library" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Laravel4-phpexcel by Maatwebsite</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Laravel4-phpexcel</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Laravel4-phpexcel</h1>
+        <p>Laravel 4 wrapper for PHPOffice&#39;s PHPExcel library</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Maatwebsite/laravel4-PHPExcel">View on GitHub</a>
+        <p class="view"><a href="https://github.com/Maatwebsite/laravel4-PHPExcel">View the Project on GitHub <small>Maatwebsite/laravel4-PHPExcel</small></a></p>
 
-          <h1 id="project_title">Laravel4-phpexcel</h1>
-          <h2 id="project_tagline">Laravel 4 wrapper for PHPOffice&#39;s PHPExcel library</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Maatwebsite/laravel4-PHPExcel/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Maatwebsite/laravel4-PHPExcel/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/Maatwebsite/laravel4-PHPExcel/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Maatwebsite/laravel4-PHPExcel/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Maatwebsite/laravel4-PHPExcel">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <h2>
-<a name="laravel-4-wrapper-for-phpexcel-v030" class="anchor" href="#laravel-4-wrapper-for-phpexcel-v030"><span class="octicon octicon-link"></span></a>Laravel 4 Wrapper for PHPExcel v0.3.0</h2>
+<a name="laravel-4-wrapper-for-phpexcel-v034" class="anchor" href="#laravel-4-wrapper-for-phpexcel-v034"><span class="octicon octicon-link"></span></a>Laravel 4 Wrapper for PHPExcel v0.3.4</h2>
 
-<p><a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/v/stable.png" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/downloads.png" alt="Total Downloads"></a> <a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/v/unstable.png" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/license.png" alt="License"></a></p>
+<p><a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/v/stable.png" alt="Latest Stable Version"></a> <a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/downloads.png" alt="Total Downloads"></a> <a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/v/unstable.png" alt="Latest Unstable Version"></a> <a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/license.png" alt="License"></a>
+<a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/d/monthly.png" alt="Monthly Downloads"></a>
+<a href="https://packagist.org/packages/maatwebsite/excel"><img src="https://poser.pugx.org/maatwebsite/excel/d/daily.png" alt="Daily Downloads"></a></p>
 
 <h1>
-<a name="new-to-v030" class="anchor" href="#new-to-v030"><span class="octicon octicon-link"></span></a>New to v0.3.0</h1>
+<a name="new-to-v03x" class="anchor" href="#new-to-v03x"><span class="octicon octicon-link"></span></a>New to v0.3.x</h1>
 
 <ul>
+<li>Possibility to call <strong>all native PHPExcel methods</strong>
+</li>
+<li>seperator config value for label formatting (default is <code>-</code>)</li>
+<li>loadView supports <code>-&gt;withKey('value')</code> &amp; <code>-&gt;with('key', 'value')</code> to set view data</li>
+<li>Multiple sheets with support for a different view per sheet (or share the view)</li>
 <li>CSV import fix</li>
 <li>Date formatting fix</li>
 <li>
-<code>loadView()</code> inline styles parsing</li>
+<code>loadView()</code> inline styles parsing (including style, rowspan, colspan, align, valign)</li>
 <li>
 <code>store()</code> can return information about the storage or can be followed by <code>-&gt;export()</code>
 </li>
@@ -72,7 +76,10 @@
 
 <div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">create</span><span class="p">(</span><span class="s1">'ExcelName'</span><span class="p">)</span>
         <span class="o">-&gt;</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'SheetName'</span><span class="p">)</span>
-            <span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="s1">'data'</span><span class="p">))</span>
+            <span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+                <span class="k">array</span><span class="p">(</span><span class="s1">'data1'</span><span class="p">,</span> <span class="s1">'data2'</span><span class="p">),</span>
+                <span class="k">array</span><span class="p">(</span><span class="s1">'data3'</span><span class="p">,</span> <span class="s1">'data4'</span><span class="p">)</span>
+            <span class="p">))</span>
         <span class="o">-&gt;</span><span class="na">export</span><span class="p">(</span><span class="s1">'xls'</span><span class="p">);</span>
 </pre></div>
 
@@ -105,18 +112,65 @@ Use <code>loadView()</code> with a view file and data to be used inside the view
 <div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'folder.file'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'key'</span> <span class="o">=&gt;</span> <span class="s1">'value'</span><span class="p">))</span><span class="o">-&gt;</span><span class="na">export</span><span class="p">(</span><span class="s1">'xls'</span><span class="p">);</span>
 </pre></div>
 
-<p>If you want to give the file and worksheet a name chain <code>setTitle()</code> and <code>sheet()</code> after the <code>loadView()</code></p>
+<p>Alternatively you can use <code>with('key', 'value')</code> or <code>withKey('value')</code> as view data setters.</p>
 
-<div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'folder.file'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'key'</span> <span class="o">=&gt;</span> <span class="s1">'value'</span><span class="p">))</span>
+<div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'folder.file'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">with</span><span class="p">(</span><span class="s1">'first'</span><span class="p">,</span> <span class="s1">'value1'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">withSecond</span><span class="p">(</span><span class="s1">'value2'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">export</span><span class="p">(</span><span class="s1">'xls'</span><span class="p">);</span>
+</pre></div>
+
+<p>If you want to give the file  a name chain <code>setTitle()</code> after the <code>loadView()</code></p>
+
+<div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'SheetName'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'folder.file'</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'key'</span> <span class="o">=&gt;</span> <span class="s1">'value'</span><span class="p">))</span>
         <span class="o">-&gt;</span><span class="na">setTitle</span><span class="p">(</span><span class="s1">'Title'</span><span class="p">)</span>
-        <span class="o">-&gt;</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'SheetName'</span><span class="p">)</span>
         <span class="o">-&gt;</span><span class="na">export</span><span class="p">(</span><span class="s1">'xls'</span><span class="p">);</span>
 </pre></div>
+
+<p>If you want to create multiple cheats and share or use different views for these seperate sheets, you should call the closure</p>
+
+<div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'excel.reports'</span><span class="p">)</span>
+    <span class="o">-&gt;</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'Daily'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$sheet</span><span class="p">)</span> <span class="k">use</span><span class="p">(</span><span class="nv">$dailyReports</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nv">$sheet</span><span class="o">-&gt;</span><span class="na">withReports</span><span class="p">(</span><span class="nv">$dailyReports</span><span class="p">);</span>
+
+    <span class="p">})</span><span class="o">-&gt;</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'Weekly'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$sheet</span><span class="p">)</span> <span class="k">use</span><span class="p">(</span><span class="nv">$weeklyReports</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nv">$sheet</span><span class="o">-&gt;</span><span class="na">withReports</span><span class="p">(</span><span class="nv">$weeklyReports</span><span class="p">);</span>
+
+    <span class="p">})</span><span class="o">-&gt;</span><span class="na">setTitle</span><span class="p">(</span><span class="s1">'Reports'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">export</span><span class="p">(</span><span class="s1">'xls'</span><span class="p">);</span>
+</pre></div>
+
+<p>Optionally you can change the view inside the closure.</p>
+
+<div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'Daily'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$sheet</span><span class="p">)</span> <span class="k">use</span><span class="p">(</span><span class="nv">$dailyReports</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nv">$sheet</span><span class="o">-&gt;</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'excel.reports.daily'</span><span class="p">);</span>
+        <span class="nv">$sheet</span><span class="o">-&gt;</span><span class="na">withReports</span><span class="p">(</span><span class="nv">$dailyReports</span><span class="p">);</span>
+
+    <span class="p">})</span><span class="o">-&gt;</span><span class="na">sheet</span><span class="p">(</span><span class="s1">'Weekly'</span><span class="p">,</span> <span class="k">function</span><span class="p">(</span><span class="nv">$sheet</span><span class="p">)</span> <span class="k">use</span><span class="p">(</span><span class="nv">$weeklyReports</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nv">$sheet</span><span class="o">-&gt;</span><span class="na">loadView</span><span class="p">(</span><span class="s1">'excel.reports.weekly'</span><span class="p">);</span>
+        <span class="nv">$sheet</span><span class="o">-&gt;</span><span class="na">withReports</span><span class="p">(</span><span class="nv">$weeklyReports</span><span class="p">);</span>
+
+    <span class="p">})</span><span class="o">-&gt;</span><span class="na">setTitle</span><span class="p">(</span><span class="s1">'Reports'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">export</span><span class="p">(</span><span class="s1">'xls'</span><span class="p">);</span>
+</pre></div>
+
+<blockquote>
+<p>Closures are only accepted when using a view.</p>
+</blockquote>
+
+<p>To change the sheet's orientation, use <code>$sheet-&gt;setOrientation('landscape')</code></p>
+
+<h2>
+<a name="view-styling" class="anchor" href="#view-styling"><span class="octicon octicon-link"></span></a>View styling</h2>
 
 <p>It possible to use some basic styling inside the table.
 HTML tags <code>&lt;strong&gt;, &lt;i&gt; and &lt;b&gt;</code> are supported at this moment.</p>
 
-<p>Most of the inline styles are parsed:</p>
+<p>Table attributes (<code>align, valign, rowspan &amp; colspan</code>) will be properly parsed.</p>
+
+<p>Most of the inline styles are parsed (style="background: #000000"):</p>
 
 <table>
 <thead><tr>
@@ -226,13 +280,13 @@ HTML tags <code>&lt;strong&gt;, &lt;i&gt; and &lt;b&gt;</code> are supported at 
 <div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">'file.csv'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">();</span>
 </pre></div>
 
-<p>Optionally you can select columns, by there column index.
+<p>Optionally you can select columns, by their column index.
 An empty <code>select()</code>, or no select at all, means we will return all columns</p>
 
 <div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">'file.csv'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">();</span>
 </pre></div>
 
-<p>If the first row is the table heading, you can give the <code>load()</code> method an extra parameter. This will make sure the first row is interpreted as heading. These seperate columns values will be used as array indexes. Now you can select columns by their name. Note that the string will be lowercase and spaces will be replaced by <code>-</code>.</p>
+<p>If the first row is the table heading, you can give the <code>load()</code> method an extra parameter. This will make sure the first row is interpreted as heading. These seperate columns values will be used as array indices. Now you can select columns by their name. Note that the string will be lowercase and spaces will be replaced by <code>-</code>.</p>
 
 <div class="highlight highlight-php"><pre><span class="nx">Excel</span><span class="o">::</span><span class="na">load</span><span class="p">(</span><span class="s1">'file.csv'</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s1">'column1'</span><span class="p">,</span> <span class="s1">'column2'</span><span class="p">))</span><span class="o">-&gt;</span><span class="na">toArray</span><span class="p">();</span>
 </pre></div>
@@ -297,11 +351,18 @@ You can disable this feature by using <code>formatDates(false)</code></p>
 <p>If you want to format a certain column or range, you can use <code>setColumnFormat(array())</code>.
 Use the column coordinate or range as array index and use the format code as array value.</p>
 
-<p>Example to get two leading zeros before the number:</p>
+<p>Example to get two leading zeros before the number for one column</p>
+
+<div class="highlight highlight-php"><pre><span class="o">-&gt;</span><span class="na">setColumnFormat</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
+    <span class="s1">'A'</span> <span class="o">=&gt;</span> <span class="s1">'0000'</span>
+ <span class="p">))</span>
+</pre></div>
+
+<p>Example to get two leading zeros before the number with a range:</p>
 
 <div class="highlight highlight-php"><pre><span class="o">-&gt;</span><span class="na">setColumnFormat</span><span class="p">(</span><span class="k">array</span><span class="p">(</span>
     <span class="s1">'A2:K2'</span> <span class="o">=&gt;</span> <span class="s1">'0000'</span>
- <span class="p">)</span>
+ <span class="p">))</span>
 </pre></div>
 
 <h1>
@@ -322,7 +383,7 @@ Use the column coordinate or range as array index and use the format code as arr
 
 <p>To style the border of a range</p>
 
-<div class="highlight highlight-php"><pre><span class="o">-&gt;</span><span class="na">setBorder</span><span class="p">(</span><span class="s1">'A1:F10,'</span><span class="nx">thick</span><span class="err">'</span><span class="p">)</span>
+<div class="highlight highlight-php"><pre><span class="o">-&gt;</span><span class="na">setBorder</span><span class="p">(</span><span class="s1">'A1:F10'</span><span class="p">,</span><span class="s1">'thick'</span><span class="p">)</span>
 </pre></div>
 
 <p>You can use all the PHP Excel border styles.</p>
@@ -334,18 +395,24 @@ Use the column coordinate or range as array index and use the format code as arr
 
 <div class="highlight highlight-php"><pre><span class="nx">php</span> <span class="nx">artisan</span> <span class="nx">config</span><span class="o">:</span><span class="nx">publish</span> <span class="nx">maatwebsite</span><span class="o">/</span><span class="nx">excel</span>
 </pre></div>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Laravel4-phpexcel maintained by <a href="https://github.com/Maatwebsite">Maatwebsite</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+<h1>
+<a name="v100-todo" class="anchor" href="#v100-todo"><span class="octicon octicon-link"></span></a>v1.0.0 TODO</h1>
+
+<ul>
+<li>Unit testing</li>
+<li>Cell caching</li>
+</ul><h1>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>This package is licensed under LGPL. You are free to use it in personal and non-commercial projects. The code can be forked and modified, but original copyright author should always be included!</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Maatwebsite">Maatwebsite</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
